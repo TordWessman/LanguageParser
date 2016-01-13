@@ -1,0 +1,250 @@
+﻿APHRASIA:
+ (b) A disorder of speech in which words can be uttered but not
+intelligibly joined together.
+
+
+
+
+
+
+IRREGULAR VERBS:
+		simple			present		perfect			past.continous		perf.prog.
+		am,are,is		
+BE:	
+
+
+VERBS:
+	eat
+		eats	{"Name": "third", "Key": "trd." },
+		ate	{"Name": "imperfect", "Key": "imp." },
+		eaten	{"Name": "past", "Key": "p.p." }, 
+		eating	{"Name": "progressive", "Key": "p.pr." }
+
+
+		simple				present		perfect				past.continous		perf.prog.
+		I	I	I will		p. pr. & vb. n.					p. p.
+EAT:	eat,ate,eat			eating 		eating				eaten				eating
+		IT
+		eats
+							p. pr. & vb. n.					imp. & p. p.
+ECHO	echo,echoed,echo	echoing							echoed
+		sing. pres.
+		echoes
+
+FREE	[imp. & p. p. Freed; p. pr. & vb. n. Freeing.]
+
+			--				imp.		p.p.			p.pr
+present, 	trd, 			imperfect,	progressive, 	perfect
+
+eat	, 		eats,			ate			eaten		 	eating
+free		frees			freed		freed			freeing
+speak		speaks			spoke		spoken			speaking
+					
+- - - - -  - -SPEAK
+Speak, v. i. [imp. Spoke (Spake ( Archaic); p. p. Spoken (Spoke, Obs.
+or Colloq.); p. pr. & vb. n. Speaking.] Etym: [OE. speken, AS.
+specan, sprecan; akin to OF.ries. spreka, D. spreken, OS. spreken, G.
+sprechen, OHG. sprehhan, and perhaps to Skr. sphurj to crackle, to
+thunder. Cf. Spark of fire, Speech.]
+
+		----- EAT
+
+		Eat, v. t. [imp. Ate, Obsolescent & Colloq. Eat (; p. p. Eaten, Obs.
+or Colloq. Eat (p. pr. & vb. n. Eating.] Etym: [OE. eten, AS. etan;
+akin to OS. etan, OFries. eta, D. eten, OHG. ezzan, G. essen, Icel.
+eta, Sw. äta, Dan. æde, Goth. itan, Ir. & Gael. ith, W. ysu, L.
+edere, Gr. ad. Etch, Fret to rub, Edible.]
+
+
+		----
+
+ECHO
+Ech"o, v. t. [imp. & p. p. Echoed; p. pr. & vb. n. Echoing.
+ -- 3d pers. sing. pres. Echoes (.]
+
+1. To send back (a sound); to repeat in sound; to reverberate.
+Those peals are echoed by the Trojan throng. Dryden.
+The wondrous sound Is echoed on forever. Keble.
+
+2. To repeat with assent; to respond; to adopt.
+They would have echoed the praises of the men whom they Macaulay.
+
+ECHO
+Ech"o, v. i.
+
+ ---
+
+EXIT
+Ex"it. Etym: [L., 3d pers. sing. pres. of exire to go out. See
+Exeunt, Issue.]
+
+Defn: He (or she ) goes out, or retires from view; as, exit Macbeth.
+
+Note: The Latin words exit (he or she goes out), and exeunt ( they go
+out), are used in dramatic writings to indicate the time of
+withdrawal from the stage of one or more of the actors.
+
+ ---
+
+ HALT
+Halt,
+
+Defn: 3d pers. sing. pres. of Hold, contraction for holdeth. [Obs.]
+Chaucer.
+
+
+ ------
+
+ HAS
+Has,
+
+Defn: 3d pers. sing. pres. of Have.
+
+ ------       HIT
+
+ HIT
+Hit, pron.
+
+Defn: It. [Obs.] Chaucer.
+
+HIT
+Hit,
+
+Defn: 3d pers. sing. pres. of Hide, contracted from hideth. [Obs.]
+Chaucer.
+
+HIT
+Hit, v. t. [imp. & p. p. Hit; p. pr. & vb. n. Hitting.] Etym: [OE.
+hitten, hutten, of Scand. origin; cf. Dan. hitte to hit, find, Sw. &
+Icel. hitta.]
+
+
+HIT
+Hit, v. i.
+
+
+HIT
+Hit, n.
+
+
+HIT
+Hit adj.
+
+------------- LAST -----
+
+
+ LAST
+Last, 3d pers. sing. pres.
+
+Defn: of Last, to endure, contracted from lasteth. [Obs.] Chaucer.
+
+
+LAST
+Last (, a. Etym: [OE. last, latst, contr. of latest, superl. of late;
+akin to OS. lezt, lazt, last, D. laatst, G. letzt. See Late, and cf.
+Latest.]
+
+
+LAST
+Last, adv. Etym: [See Last, a.]
+
+
+LAST
+Last, v. i. [imp. & p. p. Lasted; p. pr. & vb. n. Lasting.] Etym:
+[OE. lasten, As. læstan to perform, execute, follow, last, continue,
+fr. last, l, trace, footstep, course; akin to G. leisten to perform,
+Goth. laistjan to follow. See Last mold of the foot.]
+
+
+LAST
+Last, n. Etym: [AS. lasttrace, track, footstep; akin to D. leest a
+last, G. leisten, Sw. läst, Dan. læst, Icel. leistr the foot below
+the ankle, Goth. laists track, way; from a root signifying, to go.
+Cf. Last, v. i., Learn, Delirium.]
+
+
+LAST
+Last, v. t.
+
+
+LAST
+Last, n. Etym: [As. hlæst, fr. hladan to lade; akin to OHG. hlast,
+G., D., Dan., & Sw. last: cf. F. laste, last, a last, of German or
+Dutch origin. See Lade.]
+
+ ---
+
+
+
+
+ NOUNS:
+
+* Parse double nouns (ie delivery man)
+
+
+
+	/*
+	public static class IListExtensions {
+
+		public static English1Gram GetChild<English1Gram>(this IList<English1Gram> self, string name)  {
+
+			return self.wh
+				//.Select<English1Gram> (t => t.Name == "");
+			//return self.Where<English1Gram>( child => child.Name == name).First<English1Gram>();
+		
+		}
+	}*/
+
+
+
+Kostnader: inkomstfördelning/skatteflykt vs. invandring
+
+
+
+	--------------------- ADJECTIVES
+
+	EACH
+Each, a. or a. pron. Etym: [OE. eche, ælc, elk, ilk, AS. ælc; a
+always + gelic like; akin to OD. ieg, OHG. , MHG. iegelich. Aye,
+Like, and cf. Either, Every, Ilk.]
+
+EITHER
+Ei"ther, a. & pron. Etym: [OE. either, aither, AS. , (akin to OHG. ,
+MHG. iegeweder); a + ge + hwæ whether. See Each, and Whether, and cf.
+Or, conj.]
+
+	ELSE
+Else, adv. & conj.
+
+	ELSE
+Else, a. & pron. Etym: [OE. & AS. elles otherwise, gen. sing. of an
+
+
+
+ ------ PRON:
+ a. or pron.
+ a. & pron.
+  a. or a. pron.
+  a. & pron.
+
+  HERE
+Here, pron.
+
+  HE
+He, pron. [nom. He; poss. His; obj. Him; pl. nom. They; poss. Their
+or Theirs (; obj. Them.] Etym: [AS. h, masc., heó, fem., hit, neut.;
+pl. hi, or hie, hig; akin to Ofries. hi, D. hij, OS. he, hi, G. heute
+to-day, Goth. himma, dat. masc., this, hina, accus. masc., and hita,
+accus. neut., and prob. to L. his this. sq. root183. Cf. It.]
+
+  HER
+Her, pron. & a. Etym: [OE. hire, here, hir, hure, gen. and dat.
+sing., AS. hire, gen. and dat. sing. of héo she. from the same root
+as E. he. See He.]
+
+
+  HEM
+Hem, pron. Etym: [OE., fr. AS. him, heom, dative pl. of. h he. See
+He, They.]
+
+Defn: Them [Obs.] Chaucer.

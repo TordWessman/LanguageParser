@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{3CDF4C0E-C7D7-475A-90A2-46E3F30734D8}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>LanguageParser</RootNamespace>
+    <AssemblyName>LanguageParser</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IGram.cs" />
+    <Compile Include="IWordData.cs" />
+    <Compile Include="English1\English1WordData.cs" />
+    <Compile Include="IGrammarIdentifier.cs" />
+    <Compile Include="IWord.cs" />
+    <Compile Include="English1\English1WordDataReader.cs" />
+    <Compile Include="IWordDataReader.cs" />
+    <Compile Include="English1\English1GrammarFactory.cs" />
+    <Compile Include="English1\Identifiers\English1NounIdentifier.cs" />
+    <Compile Include="StringExtensions.cs" />
+    <Compile Include="DefaultImplementations\DefaultGram.cs" />
+    <Compile Include="DefaultImplementations\DefaultWord.cs" />
+    <Compile Include="DefaultImplementations\GrammarContainer.cs" />
+    <Compile Include="Example.cs" />
+    <Compile Include="DefaultImplementations\GenericGrammarIdentifier.cs" />
+    <Compile Include="English1\Identifiers\English1VerbIdentifier.cs" />
+    <Compile Include="IGrammarParser.cs" />
+    <Compile Include="DefaultImplementations\DefaultGrammarParser.cs" />
+    <Compile Include="IWordIdCounter.cs" />
+    <Compile Include="WordIdCounter.cs" />
+    <Compile Include="DefaultImplementations\BaseGrammarIdentifier.cs" />
+    <Compile Include="English1\Identifiers\English1AdjectiveIdentifier.cs" />
+    <Compile Include="IContainsWord.cs" />
+    <Compile Include="English1\Identifiers\English1AdverbIdentifier.cs" />
+    <Compile Include="IDictionary.cs" />
+    <Compile Include="DefaultImplementations\DefaultDictionary.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="EnglishGrammar.json" />
+    <None Include="Notes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="English1\" />
+    <Folder Include="English1\Identifiers\" />
+    <Folder Include="DefaultImplementations\" />
+  </ItemGroup>
+</Project>

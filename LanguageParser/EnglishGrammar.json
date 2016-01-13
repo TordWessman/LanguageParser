@@ -1,0 +1,127 @@
+﻿{ "Grammar": [
+	{
+		"Name": "noun",
+		"Key": "n.",
+		"Children": [
+			{ "Name": "plural", "Key": "pl.",
+			  "Children" : [
+					{ 	"Name": "articulated", 
+						"Key": "art.",
+						"Children" : [
+							{ "Name": "genetive", "Key": "gen." }
+						]
+					} 
+				]
+			},
+			{ 	"Name": "undetermined", 
+				"Key": "udet.",
+				"Children" : [
+					{ "Name": "genetive", "Key": "gen." }
+			]},
+			{ 
+				"Name": "articulated", 
+				"Key": "art.",
+				"Children" : [
+					{ "Name": "genetive", "Key": "gen." }
+			]},
+			{ "Name": "genetive", "Key": "gen." }
+		]
+	},
+
+	{
+		"Name": "verb",
+		"Key": "v.",
+		"Children": [
+			{"Name": "third", "Key": "trd." },
+			{"Name": "imperfect", "Key": "imp." },
+			{"Name": "past", "Key": "p.p." }, 
+			{"Name": "progressive", "Key": "p.pr." },
+			{"Name": "adjective", "Key": "a." }
+		]
+	},
+	
+	{
+		"Name": "adverb",
+		"Key": "adv.",
+		"Children": [
+			{ "Name": "undetermined", "Key": "udet." },
+			{ "Name": "articulated", "Key": "art." }
+		]
+
+	},
+
+	{
+		"Name": "preposition",
+		"Key": "prep."
+	},
+	{
+		"Name": "conjunction",
+		"Key": "conj."
+	},
+	{
+		"Name": "pronomen",
+		"Key": "pron."
+	},
+	{
+		"Name": "numeral",
+		"Key": "numeral."
+	},
+	{
+		"Name": "adjective",
+		"Key": "a.",
+		"Children": [
+			{ "Name": "undetermined", "Key": "udet." },
+			{ "Name": "articulated", "Key": "art." },
+			{ 	"Name": "comparative", 
+				"Key": "com.",
+		 		"Children": [
+					{ "Name": "undetermined", "Key": "udet." },
+					{ "Name": "articulated", "Key": "art." }
+				]
+			},
+			{ 	"Name": "superlative", 
+				"Key": "sup.",
+		 		"Children": [
+					{ "Name": "articulated", "Key": "art." }
+				]
+			},
+			{ 	"Name": "adjective", 
+				"Key": "adj.",
+		 		"Children": [
+					{ "Name": "undetermined", "Key": "udet." },
+					{ "Name": "articulated", "Key": "art." }
+				]
+			}
+		]
+	},
+	{
+		"Name": "interjection",
+		"Key": "interj."
+	}
+],
+
+	"IgnoreWords": ["i", "me" ,"mine", 
+					"you", "yours",
+					"she", "her",
+					"he", "him", "his",
+					"it", "its",
+					"we", "us", "hour",
+					"they", "them", "their",
+
+					"the", "a", "an", "are"],
+
+	"IgnoreIdentifiers": ["imp.", "p.p." ,"p.a.", "pret.", "pref.", "fr.",
+		"pl.", "sing.pres.", "sing.pr.", "pers.sing.pres.","p.pr.a.", "dv."],
+
+	"ReplaceIdentifiers": [
+			["a. or pron.","pron."],
+			["a. & pron.","pron."],
+			["a. or a. pron.","pron."],
+			["p. p. & a.", "a."],
+			["n. sing. & pl.", "n."],
+			["a. & adv.", "a."],
+			["adv. & a.", "a."],
+			["adv. & conj.", "adv.",
+			"n. t.", "v. t."]
+		]
+}
