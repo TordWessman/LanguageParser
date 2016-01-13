@@ -77,7 +77,7 @@ namespace LanguageParser
 			}
 		}
 
-		public string Classes {
+		public string[] Classes {
 			get {
 				return m_classes;
 			}

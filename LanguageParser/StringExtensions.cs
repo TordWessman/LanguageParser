@@ -23,6 +23,8 @@ namespace LanguageParser
 			return self [self.Length - 1];
 		
 		}
+
 	}
+
 }
 

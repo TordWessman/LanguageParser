@@ -67,11 +67,15 @@ namespace LanguageParser
 
 			List<IWord> alt = new List<IWord> ();
 
+			string typeClass;
+
 			if (wordData.Descriptor == "a.superl.") {
 			
 				//Supqrlative only adjective (ie aftermost)
 			
 				DefaultGram gram = m_gram.Children.Where (child => child.Name == "superlative").First ();
+
+				typeClass = wordData.Word [0].IsVowel () ? gram.Classes.Where (c => c == "an").First() : gram.Classes.Where (c => c == "a").First();
 
 				alt.Add (new DefaultWord (wordData.Word, gram, NextWordId));
 
@@ -119,7 +123,9 @@ namespace LanguageParser
 			}
 
 
-			alt.Add (new DefaultWord(wordData.Word, m_gram, NextWordId));
+			typeClass = wordData.Word [0].IsVowel () ? m_gram.Classes.Where (c => c == "an").First() : m_gram.Classes.Where (c => c == "a").First();
+
+			alt.Add (new DefaultWord(wordData.Word, m_gram, NextWordId, typeClass));
 
 			//alt.AddRange(CreateDeterminedAndUndetermined(wordData.Word, m_gram));
 
@@ -164,54 +170,14 @@ namespace LanguageParser
 
 			DefaultGram gram = m_gram.Children.Where (child => child.Name == "adjective").First ();
 
-			alt.Add (new DefaultWord(adjective, gram, NextWordId));
+			string typeClass = adjective [0].IsVowel () ? gram.Classes.Where (c => c == "an").First() : gram.Classes.Where (c => c == "a").First();
+
+			alt.Add (new DefaultWord(adjective, gram, NextWordId, typeClass));
 			
 			//alt.AddRange (CreateDeterminedAndUndetermined (adjective, gram));
 
 			return alt;
 
-		}
-
-		private string getUnDermined(string word) {
-
-			if (word [0].IsVowel()) {
-
-				return "an " + word;
-
-			}
-
-			return "a " + word;
-
-		}
-
-		private IList<IWord> CreateDeterminedAndUndetermined (string word, DefaultGram mother)
-		{
-			string article = "the";
-
-			IList<IWord> alt = new List<IWord> ();
-
-			string undetermined = getUnDermined (word);
-
-			alt.Add (new DefaultWord(undetermined, mother.Children.Where( child => child.Name == "undetermined").First(), NextWordId));
-
-			string definedSingular = article + " " + word;
-
-			alt.Add (new DefaultWord(definedSingular, mother.Children.Where( child => child.Name == "articulated").First(), NextWordId));
-
-			return alt;
-		}
-
-		private IList<IWord> CreateArticulated (string word, DefaultGram mother)
-		{
-			string article = "the";
-
-			IList<IWord> alt = new List<IWord> ();
-
-			string definedSingular = article + " " + word;
-
-			alt.Add (new DefaultWord(definedSingular, mother.Children.Where( child => child.Name == "articulated").First(), NextWordId));
-
-			return alt;
 		}
 
 		private IList<IWord> GetComparative(string bracketsContainer) {
@@ -226,13 +192,11 @@ namespace LanguageParser
 
 				DefaultGram gram = m_gram.Children.Where (child => child.Name == "comparative").First ();
 
-				alt.Add (new DefaultWord (adj, gram, NextWordId));
-			
-				//alt.AddRange(CreateDeterminedAndUndetermined(adj,gram));
+				string typeClass = adj [0].IsVowel () ? gram.Classes.Where (c => c == "an").First(): gram.Classes.Where (c => c == "a").First();
+
+				alt.Add (new DefaultWord (adj, gram, NextWordId, typeClass));
 			
 			}
-			//Console.WriteLine ("---- - - -");
-			//MainClass.PrintWordData (alt);
 
 			return alt;
 		}
@@ -249,9 +213,10 @@ namespace LanguageParser
 
 				DefaultGram gram = m_gram.Children.Where (child => child.Name == "superlative").First ();
 
-				alt.Add (new DefaultWord (adj, gram, NextWordId));
+				string typeClass = adj [0].IsVowel () ? gram.Classes.Where (c => c == "an").First() : gram.Classes.Where (c => c == "a").First();
 
-				//alt.AddRange(CreateArticulated(adj,gram));
+				alt.Add (new DefaultWord (adj, gram, NextWordId, typeClass));
+
 
 			}
 

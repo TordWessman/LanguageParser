@@ -66,7 +66,9 @@ namespace LanguageParser
 
 			} 
 
-			alt.Add (new DefaultWord(wordData.Word, m_noun, NextWordId));
+			string typeClass = wordData.Word [0].IsVowel () ? m_noun.Classes.Where (c => c == "an").First() : m_noun.Classes.Where (c => c == "a").First();
+
+			alt.Add (new DefaultWord(wordData.Word, m_noun, NextWordId, typeClass ));
 
 			// if n.sing., the word is conjugated the same in singular/plural
 

@@ -2,28 +2,15 @@
 	{
 		"Name": "noun",
 		"Key": "n.",
+		"Classes": ["a", "an"],
 		"Children": [
 			{ "Name": "plural", "Key": "pl.",
 			  "Children" : [
-					{ 	"Name": "articulated", 
-						"Key": "art.",
-						"Children" : [
 							{ "Name": "genetive", "Key": "gen." }
 						]
 					} 
 				]
 			},
-			{ 	"Name": "undetermined", 
-				"Key": "udet.",
-				"Children" : [
-					{ "Name": "genetive", "Key": "gen." }
-			]},
-			{ 
-				"Name": "articulated", 
-				"Key": "art.",
-				"Children" : [
-					{ "Name": "genetive", "Key": "gen." }
-			]},
 			{ "Name": "genetive", "Key": "gen." }
 		]
 	},
@@ -43,11 +30,7 @@
 	{
 		"Name": "adverb",
 		"Key": "adv.",
-		"Children": [
-			{ "Name": "undetermined", "Key": "udet." },
-			{ "Name": "articulated", "Key": "art." }
-		]
-
+		"Classes": ["a", "an"]
 	},
 
 	{
@@ -69,28 +52,19 @@
 	{
 		"Name": "adjective",
 		"Key": "a.",
+		"Classes": ["a", "an"],
 		"Children": [
-			{ "Name": "undetermined", "Key": "udet." },
-			{ "Name": "articulated", "Key": "art." },
 			{ 	"Name": "comparative", 
 				"Key": "com.",
-		 		"Children": [
-					{ "Name": "undetermined", "Key": "udet." },
-					{ "Name": "articulated", "Key": "art." }
-				]
+				"Classes": ["a", "an"]
 			},
 			{ 	"Name": "superlative", 
 				"Key": "sup.",
-		 		"Children": [
-					{ "Name": "articulated", "Key": "art." }
-				]
+				"Classes": ["a", "an"]
 			},
 			{ 	"Name": "adjective", 
 				"Key": "adj.",
-		 		"Children": [
-					{ "Name": "undetermined", "Key": "udet." },
-					{ "Name": "articulated", "Key": "art." }
-				]
+				"Classes": ["a", "an"]
 			}
 		]
 	},

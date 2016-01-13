@@ -58,7 +58,7 @@ namespace LanguageParser
 				}
 				//PrintWordData (words);
 
-				if (i++ == -100) {
+				if (i++ == 100) {
 
 					IList<IWord> postProcessed = grammar.PostProcess ();
 

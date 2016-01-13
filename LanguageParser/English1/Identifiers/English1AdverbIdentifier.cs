@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace LanguageParser
 {
@@ -46,7 +45,9 @@ namespace LanguageParser
 
 			}
 
-			alt.Add (new DefaultWord(wordData.Word, m_gram, NextWordId));
+			string typeClass = wordData.Word [0].IsVowel () ? m_gram.Classes.Where (c => c == "an").First(): m_gram.Classes.Where (c => c == "a").First();
+
+			alt.Add (new DefaultWord(wordData.Word, m_gram, NextWordId, typeClass));
 
 			//alt.AddRange(CreateDeterminedAndUndetermined(wordData.Word, m_gram));
 
@@ -73,34 +74,6 @@ namespace LanguageParser
 		}
 		#endregion
 
-		private IList<IWord> CreateDeterminedAndUndetermined (string word, DefaultGram mother)
-		{
-			string article = "the";
-
-			IList<IWord> alt = new List<IWord> ();
-
-			string undetermined = getUnDermined (word);
-
-			alt.Add (new DefaultWord(undetermined, mother.Children.Where( child => child.Name == "undetermined").First(), NextWordId));
-
-			string definedSingular = article + " " + word;
-
-			alt.Add (new DefaultWord(definedSingular, mother.Children.Where( child => child.Name == "articulated").First(), NextWordId));
-
-			return alt;
-		}
-
-		private string getUnDermined(string word) {
-
-			if (word [0].IsVowel()) {
-
-				return "an " + word;
-
-			}
-
-			return "a " + word;
-
-		}
 
 	}
 }
