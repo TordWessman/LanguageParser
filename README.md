@@ -1,2 +1,2 @@
 # LanguageParser
-Atempt to parse dictionaries into a computer readable format.
+Attempt to parse dictionaries into a computer readable format.
